@@ -1,0 +1,55 @@
+<!-- Product.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Actual Price</th>
+                <th>Sold Price</th>
+                <th>Discount</th>
+                <th>Sold At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.ProductName }}</td>
+                <td>{{ product.ActualPrice }}</td>
+                <td>{{ product.Sold_Price }}</td>
+                <td>{{ product.Discount }}</td>
+                <td>{{ product.sold_At }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

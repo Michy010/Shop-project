@@ -1,0 +1,10 @@
+
+<h1>Welcome {{User.username}}!</h1>
+<p><strong>Email:</strong> {{user.email}}</p>
+<p><strong>Username:</strong> {{user.username}} </p>
+
+<form action="logout/" method="post">
+    {% csrf_token %}
+    <a href="update_profile/"> Update your information here</a>
+    <button type="submit">logout</button>
+</form>
