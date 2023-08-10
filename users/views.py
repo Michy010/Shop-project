@@ -5,22 +5,6 @@ from .forms import UserRegisterForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate , login , logout
 
-def register_View(request):
-    form = UserRegisterForm()
-    if request.method == "POST":
-        form = UserRegisterForm(request.POST)
-        if form.is_valid():
-            user = form.save() # save passed data
-            login(request, user) # login the user
-            messages.success(request, "Registration Successful")
-            return redirect("/")
-        messages.error(request, "Invalid information")
-        
-    context = {
-        "form": form,
-    }
-        
-    return render(request, "register.html", context)
 
 def register(request):
     if request.method == 'POST':
@@ -33,24 +17,7 @@ def register(request):
         return redirect('login') # Redirect user to home page
     else:
         form = UserRegisterForm()
-    return render(request, 'accounts/register.html', {'form': form})
-
-def user_login(request):
-    if request.user.is_authenticated:
-        return redirect('/')
-    else:
-        if request.method == 'POST':
-            username = request.POST.get('username') # viny
-            password = request.POST.get('password') # viny@123!
-            user = authenticate(request, username=username, password=password)
-            #TRUE/FASLE
-
-            if user is not None:
-                login(request, user)
-                return redirect('shop:home')
-            else:
-                messages.info(request, 'username or password is incorrect!') 
-        return render(request, 'accounts/login.html')
+    return render(request, 'users/register.html', {'form': form})
     
 def login_page (request):
     if request.method == 'POST':
@@ -61,6 +28,8 @@ def login_page (request):
         if user is not None:
             login(request, user)
             return redirect('/')
+        
+        return render(request, 'login.html')
     else:
         messages.info(request, 'Username or Password is incorrect')
 
