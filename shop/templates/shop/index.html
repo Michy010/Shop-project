@@ -1,8 +1,32 @@
 {% extends 'shop/base.html' %}
 {% block content %}
         <link rel="stylesheet" type="text/css" href="static/shop/main.css">
+        <style>
+            #top{
+                position: absolute;
+                top: 1.5%;
+                left: 10%;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: large;
+            }
+
+            #Top{
+                position: absolute;
+                top: 1.5%;
+                left: 20%;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: large; 
+            }
+        </style>
     </head>
     <body id="index">
        <h1>SHOP MANAGEMENT SYSTEM </h1>
        <P id="p1">Edmond's Shop the home of quality products and services</P>
+
+       <a id="top" href="{% url 'profile' %}">Profile</a>
+       <a id="Top" href="{% url 'shop:product'%}">Products</a>
+    
+    </body>
 {% endblock %}

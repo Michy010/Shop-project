@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* Add your CSS styles here */
+        .content-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .account-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .account-heading {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .text-secondary {
+            color: #777;
+        }
+
+        /* Add more custom styles as needed */
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <div class="media">
+            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="{{ user.username }}'s Profile Picture" />
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+            </div>
+        </div>
+        <!-- FORM HERE -->
+    </div>
+    <!-- Add your JavaScript scripts or links to JavaScript libraries here -->
+</body>
+</html>
+
+
+<!-- <div class="content-section">
+  <div class="media">
+    <img class="rounded-circle account-img" src="{{ users.profile.image.url }}" alt="{{ users.username }}'s Profile Picture" />
+    <div class="media-body">
+      <h2 class="account-heading">{{ users.username }}</h2>
+      <p class="text-secondary">{{ users.email }}</p>
+    </div>
+  </div>
+  
+  <form action="logout/" method="post">
+    {% csrf_token %}
+    <a href="update_profile/"> Update your information here</a>
+    <button type='submit'>logout</button>
+</form>
+</div>
+
+
+ --> 
