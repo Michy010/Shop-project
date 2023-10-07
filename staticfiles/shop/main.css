@@ -1,0 +1,62 @@
+#index {
+    background-image:url('background.jpg.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: palevioletred;
+    background: linear-gradient(to right, skyblue, lightgreen);
+}
+#p1{
+    font-size: 30px;
+    color: blue;
+    font-weight: 5000;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+
+    animation:slides;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slides {
+   from{margin-left: 100%;} 
+   to{margin-left: 0%;}
+}
+#m {
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 80px;
+    left: 10px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+}
+.nav-item nav-link{
+        text-align: center;
+        text-decoration: none;
+    }
+
+button:hover {
+    background-color: aqua;
+}
+
+#top{
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#e{
+    text-decoration: none;
+}
