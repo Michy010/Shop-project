@@ -25,6 +25,32 @@ Shop Management System is a web-based application designed to streamline the ope
 
 ## Installation
 
-To run this project locally, follow these steps:
+To get started with this project, you can follow these steps:
 
-1. Clone the repository to your local machine:
+```bash
+# 1. Clone the Repository:
+git clone https://github.com/michy010/shop-project.git
+
+# 2. Navigate to the Project Directory:
+cd shop-project
+
+# 3. Create a Virtual Environment (Optional but Recommended):
+python -m venv env
+
+# 4. Activate the Virtual Environment:
+# On Windows
+env\Scripts\activate
+# On macOS/Linux
+source env/bin/activate
+
+# 5. Install Django and Dependencies:
+pip install -r requirements.txt
+
+# 6. Apply Database Migrations:
+python manage.py migrate
+
+# 7. Create a Superuser (Optional):
+python manage.py createsuperuser
+
+# 8. Run the Development Server:
+python manage.py runserver
